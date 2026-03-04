@@ -1467,7 +1467,7 @@ let state = {
 const ALL_TAGS = [
   'AFL','Animals','Bikies','Bizarre','Business','Celebrities','Class action',
   'Corruption','Crash','Death','Defamation','Domestic violence','Drugs',
-  'Environment','Financial crimes','Hate crime','High-profile','Historic',
+  'Environment','Financial crimes','Hate crime','Hidden from court lists','High-profile','Historic',
   'Gun crime','Indigenous','Knife crime','Legal','Media and Entertainment',
   'Medical','Nazis','Organised crime','Poisoning','Police misconduct',
   'Politics','Prison','Sexual offences','Sport (not AFL)','Suppression',
@@ -1665,7 +1665,7 @@ Extract these fields exactly:
 - Summary: string — MAX 15 words, plain English description of the crime itself (what happened), not the legal outcome or sentence. Think of it as a concise version of IncidentDetails.
 - SuppressionMentioned: boolean — true if any suppression order mentioned anywhere in source
 - SuppressionNote: string or null — brief note on what suppression relates to if mentioned
-- SuggestedTags: array of strings — select only from this exact list: ["AFL","Animals","Bikies","Business","Celebrities","Class action","Corruption","Crash","Death","Defamation","Domestic violence","Drugs","Environment","Financial crimes","Hate crime","Historic","Gun crime","Indigenous","Knife crime","Legal","Media and Entertainment","Medical","Nazis","Organised crime","Poisoning","Police misconduct","Politics","Prison","Sexual offences","Sport (not AFL)","Suppression","Tobacco Wars","Terrorism","Workplace incident","Youth crime"]. Never suggest "High-profile" or "Bizarre" — these are editorial judgements made by the user manually.
+- SuggestedTags: array of strings — select only from this exact list: ["AFL","Animals","Bikies","Business","Celebrities","Class action","Corruption","Crash","Death","Defamation","Domestic violence","Drugs","Environment","Financial crimes","Hate crime","Hidden from court lists","Historic","Gun crime","Indigenous","Knife crime","Legal","Media and Entertainment","Medical","Nazis","Organised crime","Poisoning","Police misconduct","Politics","Prison","Sexual offences","Sport (not AFL)","Suppression","Tobacco Wars","Terrorism","Workplace incident","Youth crime"]. Never suggest "High-profile" or "Bizarre" — these are editorial judgements made by the user manually.
 
 Return null for any field not found in the source. Do not invent information. Use only the exact names as they appear in the source material — do not shorten, expand, or alter names based on prior knowledge. If a name appears as "Nicholas" in the source, do not change it to "Nick" and vice versa. Strict fidelity to source wording on all names.`;
 
