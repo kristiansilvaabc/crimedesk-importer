@@ -1686,7 +1686,7 @@ Return null for any field not found in the source. Do not invent information. Us
   const tools = source.type === 'url' ? [{ type: 'web_search_20250305', name: 'web_search' }] : undefined;
 
   const body = {
-    model: 'claude-sonnet-4-20250514',
+    model: 'claude-sonnet-4-6',
     max_tokens: 1000,
     system: SYSTEM,
     messages
@@ -1720,7 +1720,7 @@ async function mergeExtractions(s1, s2, apiKey) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1000,
       system: SYSTEM,
       messages: [{ role: 'user', content: `Source 1 extraction:\n${JSON.stringify(s1)}\n\nSource 2 extraction:\n${JSON.stringify(s2)}\n\nMerge into one best combined record.` }]
